@@ -5,7 +5,22 @@ header{
     left: 0px;
     top: 0px;
     height: 91px;
+    position: fixed;
 }
+aside{
+    position: absolute;
+    width: 253px;
+    height: 9000px;
+    left: 0;
+    margin-top: 100px;
+    background-color: rgba(55, 56, 103, 0.1);
+    position: fixed;
+}
+
+aside form{
+    
+}
+
 h1{
     text-transform: uppercase;
     color: #46A07B;
