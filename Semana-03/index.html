@@ -72,13 +72,17 @@
                 <h2 class="welcome-title">
                     Welcome
                 </h2>
-                <div class="welcome-section">              
-                    <p class="welcome-p">
-                        “TRACKGENIX” is a revolutionary system designed for GigaTech Software Solutions SA. 
-                        This system will allow them to efficiently manage their proyects, schedule flow,
-                        selected work teams and much more
-                    </p>
-                    <img src="../Semana-01/assets/Software-Libre1.jpg" alt="code" class="code-img">
+                <div class="welcome-section">
+                    <div class="welcome-text">             
+                        <p class="welcome-p">
+                            “TRACKGENIX” is a revolutionary system designed for GigaTech Software Solutions SA. 
+                            This system will allow them to efficiently manage their proyects, schedule flow,
+                            selected work teams and much more
+                        </p>
+                    </div>
+                    <div class="welcome-image">
+                        <img src="../Semana-01/assets/Software-Libre1.jpg" alt="code" class="code-img">
+                    </div> 
                 </div>
             </section> 
             <section class="aplications-features">
@@ -158,7 +162,7 @@
                 <h2>
                     Inscription Form
                 </h2>
-                <form action="/inscription">
+                <form action="/inscription" class="form-inscr">
                     <input type="text" id="name" name="name" value="Name" >
                     <input type="text" id="email" name="email" value="Email">
                     <select id="contact" name="Contact Area">
@@ -174,7 +178,10 @@
                     <p>
                         Text
                     </p>
-                    <input type="text" id="name" name="name" value="Text" >
+                    <input type="text" id="enter-text" name="enter-text" value="Text" >
+                    <button class="send-form">
+                        Send
+                    </button>
                 </form>
             </section>
             <section class="company-mission">
