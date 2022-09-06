@@ -1,16 +1,19 @@
 /* HEADER */
+@font-face {
+    font-family:Roboto;
+    src: url(https://fonts.google.com/specimen/Roboto?query=roboto);
+}
 body{
     overflow-x: hidden;
+    /* height: 100%; */
 }
 header{
-    background-color: #373867;
-    position: relative;
+    display: inline;
     width: 1512px;
-    left: 0px;
-    top: 0px;
     height: 91px;
     position: fixed;
     z-index: 10px;
+    background-color: #373867;
 }
 h1{
     font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -81,13 +84,12 @@ nav ul li button a{
 /* ASIDE */
 
 aside{
-    position: absolute;
+    position: fixed;
     width: 253px;
-    height: 9457px;
+    height: 100%;
     left: 0;
     top: 30px;
     background-color: rgba(55, 56, 103, 0.1);
-    position: fixed;
     z-index: 6px;
 }
 aside input{
@@ -132,6 +134,11 @@ aside ul button{
     width: 141.55px;
     height: 39.86px;
     left: 46px;
+    background: none;
+    border: none;
+    padding: 0;
+    font: inherit;
+    outline: inherit;
 }
 aside img{
     position: absolute;
@@ -146,7 +153,7 @@ aside p{
     height: 13px;
     left: 12px;
     top: 710px;
-    font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family:'Roboto';
     font-style: normal;
     font-weight: 400;
     font-size: 11px;
@@ -157,14 +164,14 @@ aside p{
 /* MAIN */
 
 main{
-    position: absolute;
+    position: relative;
     width: 1259px;
     height: 9399px;
     left: 253px;
     top: 88px;
     z-index: 1px;
 }
-article{
+main section{
     position: relative;
 }
 .welcome-box{
@@ -175,6 +182,7 @@ article{
     left: 474px;
     top: 103px;
     background: rgba(170, 206, 155, 0.53);
+    font-family: 'roboto';
     border: 2px solid #000000;
     filter: blur(4px);
     border-radius: 20px;
@@ -185,7 +193,7 @@ article{
     height: 58px;
     left: 512px;
     top: 113px;
-    font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family:'Roboto';
     text-transform: uppercase;
     font-style: normal;
     font-weight: 400;
@@ -232,7 +240,7 @@ article{
 }
 .aplications-features h2{
     margin: 0px 0px 49px 100px;
-    font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
     font-size: 40px;
@@ -250,7 +258,7 @@ article{
 }
 .aplications-features article h3{
     margin-bottom: 24px;
-    font-family:  Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family:'Roboto';
     font-style: normal;
     font-weight: 700;
     font-size: 30px;
@@ -266,7 +274,7 @@ article{
 }
 .why-trackgenix h2{
     margin: 0 0 0 296px;
-    font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
     font-size: 40px;
@@ -299,6 +307,7 @@ article{
 .inscription{
     position: relative;
     top: 47px;
+    left: 74px;
 }
 .inscription h2{
     left: 76px;
@@ -362,5 +371,326 @@ article{
     top: 80px;
     border-radius: 4px;
 }
+.send-form{
+    background-color: #479679;
+    color: #000;
+    padding: 10px 15px;
+    border: none;
+}
+.company-mission{
+    position: relative;
+}
+#company-title{
+    display: inline-block;
+    width: 195px;
+    height: 30px;
+    margin: 80px 825px 29px 56px;
+    font-weight: 700px;
+    font-weight: 700;
+    font-family: 'Roboto';
+    font-size: 20.5273px;
+    line-height: 24px;
+    color: #000000;
+    text-decoration: underline;
+}
+.company-mission img{
+    display: inline-block;
+    width: 112px;
+    height: 128px;
+    top: 40px;
+}
+.logo-company{
+    display: inline-block;
+    width: 112px;
+    height: 128px;
+    top: 40px;
+}
+.h3-1{
+    display: inline;
+    width: 819px;
+    height: 45px;
+    left: 61px;
+    top: 29px;
+    font-weight: 700;
+    font-size: 30.8px;
+    line-height: 36px;
+    align-items: center;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #373867;
+}
+.p1{
+    width: 535px;
+    height: 45px;
+    margin-left: 385px;
+    margin-top: 20px;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 67px;
+    text-align: center;
+    color: #151515;
+}
+.p2{
+    top: 29px;
+    margin-left: 32px;
+    font-weight: 400;
+    font-size: 18.75px;
+    line-height: 26px;
+    text-align: center;
+    color: #1C1C37;
+}
+.h3-2{
+    width: 609px;
+    height: 43px;
+    margin-left: 61px;
+    margin-top: 43px;
+    font-weight: 600;
+    font-size: 27.37px;
+    line-height: 32px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #373867;
+}
+.box-text{
+    width: 1156px;
+    height: 81px;
+    margin-left: 85px;
+    margin-top: 20px;
+    background: rgba(217, 217, 217, 0.2);
+    border-radius: 5.98712px;
+}
+.p3{
+    width: 1134px;
+    height: 21px;
+    padding: 20px 0 0 11px;
+    color: rgba(0, 0, 0, 0.8);
+    font-style: italic;
+    font-weight: 400;
+    font-size: 17.25px;
+    line-height: 20px;
+}
+.about-box h2{
+    width: 116px;
+    height: 29px;
+    margin: 88px 0 0 61px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    color: #373867;
+}
+.about-box p{
+    display: inline-block;
+    width: 769px;
+    margin: 40px 0 0 49px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 26px;
+    color: #373867;
+}
+.about-box img{
+    width: 363px;
+    height: 251px;
+    left: 862px;
+    top: 4680px;
+}
+.our-products{
+    position: relative;
+    top: 95px;
+    height: 1376px;
+}
+.our-products h2{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px; 
+    color: #000000;
+    text-decoration: underline;
+}
+.our-products article{
+    position: relative;
+    display: inline-block;
+    width: 40%;
+    text-align: center;
+}
+.our-products img{
+    width: 384px;
+    height: 284px;
+    left: 110px;
+    top: 5209px;
+    padding: 12px;
+}
+.our-products h3{
+    margin: 0 0 24px 135px;
+    width: 324px;
+    height: 60px;
+    font-size: 24.4762px;
+    line-height: 30px;
+    text-align: start;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 21.3846px;
+    line-height: 26px;
+    color: #000000;
+}
+.our-products p{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19.581px;
+    line-height: 24px;
+    color: #000000;
+}
+.our-products ul li{
+    width: 324px;
+    padding-left: 165px;
+    height: 20px;
+    text-align: start;
+    font-family: 'Inter';
+    font-style: normal;
+    list-style-type: circle;
+    list-style-position: inside;
+    font-weight: 400;
+    font-size: 14.6857px;
+    line-height: 18px;
+    color: #000000;
 
+}
+.company{
+    position: relative;
+    top: 49px;
+    font-family: 'Inter';
+    font-style: normal;
+    color: #000;
+}
+.company article{
+    width: 592px;
+    height: 350px;
+    margin-left: 64px;
+}
+.company h2{
+    margin: 0 0 94px 100px;
+    font-weight: 700;
+    font-size: 30px;
+    text-decoration: underline;
+}
+.company h3{
+    position: absolute;
+    display: inline-block;
+    margin: 18px 0 0 24px;
+    font-size: 26px;
+    line-height: 31px;
+}
+.company img{
+    width: 477px;
+    height: 304px;
+}
+.support{
+    position: relative;
+    top: 126px;
+    left: 50px;
+}
+.support h2{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+    color: #000000;
+    text-decoration: underline;
+}
+.support article{
+    display: inline-block;
+    width: 592px;
+    top: 50px;
+    text-align: center;
+}
+.support img{
+    width: 505px;
+    height: 282px;
+}
+.support p{
+    position: absolute;
+    margin: 0 0 0 92px;
+    width: 448px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 23px;
+    line-height: 28px;
+    text-align: center;
+    color: #000000;
+}
+.tutorials{
+    position: relative;
+    width: 1000px;
+    top: 224px;
+    left: 94px;
+}
+.tutorials h2{
+    height: 27px;
+    margin: 74px 0 0 0; 
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 41px;
+    color: #000000;
+}
+.tutorials ol{
+    margin: 49px 0 0 105px;
+    list-style: decimal;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 31px;
+}
+.youtube-bt{
+    width: 480px;
+    height: 116px;
+    margin: 143px 0 0 389px;
+}
+.youtube-bt button{
+    width: 480px;
+    height: 116px;
+    background: #98220D;
+    box-shadow: 0px 4px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+}
+.youtube-bt button a{
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 31px;
+    color: #FFFFFF;
+    text-decoration: none;
+}
 /* FOOTER */
+
+footer{
+    display: block;
+    text-align: center;
+}
+footer .social-links{
+    margin: 391px 0 0 253px;
+    width: 1259px;
+    height: 74px;
+    background: #373867;
+}
+footer .social-links a{
+    padding: 80px;
+}
+footer p{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+}
