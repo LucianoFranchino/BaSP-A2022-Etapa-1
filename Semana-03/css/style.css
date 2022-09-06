@@ -1,34 +1,30 @@
-/* HEADER */
-@font-face {
-    font-family:Roboto;
-    src: url(https://fonts.google.com/specimen/Roboto?query=roboto);
-}
 body{
     overflow-x: hidden;
-    /* height: 100%; */
+    height: 100%;
 }
 header{
     display: inline;
+    position: fixed;
     width: 1512px;
     height: 91px;
-    position: fixed;
-    z-index: 10px;
     background-color: #373867;
+    z-index: 10;
 }
 h1{
-    font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: #46A07B;
-    text-transform: uppercase;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 60px;
-    line-height: 70px;
     text-align:center;
     position: absolute;
     width: 366px;
     height: 70px;
     left: 573px;
     top: 9px;
+    font-family: 'Roboto', sans-serif;
+    color: #46A07B;
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 70px;
+    
 }
 .logohead {
     position: absolute;
@@ -38,41 +34,42 @@ h1{
     top: 12px;
 }
 nav {
+    position: relative;
+    float: right;
     box-sizing: border-box;
     top: 88px;
-    float: right;
-    position: relative;
     width: 1259px;
     height: 55px;
     background-color: #373867;
 }
 nav ul {
-    list-style-type: none;
+    box-sizing: border-box;
     width: 100%;
     margin: 0;
     padding: 0;
     border: none;
-    box-sizing: border-box;
+    list-style-type: none;
+    
 }
 nav ul li {
-    width: 180px;
-    height: 55px;
+    box-sizing: border-box;
     display: inline;
     float: left;
+    width: 200px;
+    height: 55px;
     border: none;
-    box-sizing: border-box;
     border: 0px ;
 }
 nav ul li button {
     width: 180px;
     height: 55px;    
-    border: none;
     background-color: #373867;
+    border: none;
     border-left: 1px solid black;
     border-bottom: 1px solid black;
 }
 nav ul li button a{
-    font-family: 'Roboto';
+    font-family: 'Roboto', sans-serif;
     font-style: normal;
     text-align: center;
     font-weight: 400px;
@@ -80,9 +77,6 @@ nav ul li button a{
     color: #46A07B;
     text-decoration: none;
 }
-
-/* ASIDE */
-
 aside{
     position: fixed;
     width: 253px;
@@ -90,7 +84,7 @@ aside{
     left: 0;
     top: 30px;
     background-color: rgba(55, 56, 103, 0.1);
-    z-index: 6px;
+    z-index: 6;
 }
 aside input{
     position: relative;
@@ -107,7 +101,7 @@ aside h2{
     height: 23px;
     left: 92px;
     top: 130px;
-    font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 19.3686px;
@@ -134,9 +128,9 @@ aside ul button{
     width: 141.55px;
     height: 39.86px;
     left: 46px;
+    padding: 0;
     background: none;
     border: none;
-    padding: 0;
     font: inherit;
     outline: inherit;
 }
@@ -160,19 +154,16 @@ aside p{
     line-height: 13px;
     color: black;
 }
-
-/* MAIN */
-
 main{
     position: relative;
     width: 1259px;
-    height: 9399px;
     left: 253px;
     top: 88px;
-    z-index: 1px;
+    z-index: 1;
 }
 main section{
     position: relative;
+    border-bottom: 2px solid #000;
 }
 .welcome-box{
     box-sizing: border-box;
@@ -182,7 +173,7 @@ main section{
     left: 474px;
     top: 103px;
     background: rgba(170, 206, 155, 0.53);
-    font-family: 'roboto';
+    font-family: 'Roboto', sans-serif;
     border: 2px solid #000000;
     filter: blur(4px);
     border-radius: 20px;
@@ -193,7 +184,7 @@ main section{
     height: 58px;
     left: 512px;
     top: 113px;
-    font-family:'Roboto';
+    font-family:'roboto';
     text-transform: uppercase;
     font-style: normal;
     font-weight: 400;
@@ -203,10 +194,11 @@ main section{
 }
 .welcome-section{
     position: relative;
-    margin: auto;
     display: inline-block;
+    margin: auto;
     width: 1512px;
     padding: 300px;
+    
 }
 .welcome-text{
     position: absolute;
@@ -225,12 +217,12 @@ main section{
     height: 272.52px;
 }
 .welcome-p{
-    font-family: 'Roboto';
+    left: 134px;
+    font-family: 'Roboto', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 28.8453px;
     line-height: 41px;
-    left: 134px;
 }
 .aplications-features article{
     display: inline-block;
@@ -240,7 +232,7 @@ main section{
 }
 .aplications-features h2{
     margin: 0px 0px 49px 100px;
-    font-family: 'Roboto';
+    font-family: 'Roboto', sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 40px;
@@ -274,7 +266,7 @@ main section{
 }
 .why-trackgenix h2{
     margin: 0 0 0 296px;
-    font-family: 'Roboto';
+    font-family: 'Roboto', sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 40px;
@@ -282,7 +274,7 @@ main section{
     color: #373867;
 }
 .why-trackgenix h3{
-    font-family: 'Roboto';
+    font-family: 'Roboto', sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 30px;
@@ -291,7 +283,7 @@ main section{
     color: #373867;
 }
 .why-trackgenix p{
-    font-family: 'Roboto';
+    font-family: 'Roboto', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
@@ -310,7 +302,7 @@ main section{
     left: 74px;
 }
 .inscription h2{
-    left: 76px;
+    margin: 0 0 76px;
     font-family:'Roboto';
     font-style: normal;
     font-weight: 700;
@@ -320,6 +312,7 @@ main section{
     text-decoration: underline;
 }
 .form-inscr{
+    margin-bottom: 70px;
     display: block;
     top: 70px;
     left: 83px;
@@ -331,29 +324,62 @@ main section{
     border-radius: 4px;
 }
 #contact{
-    width: 1128px;
+    width: 1125px;
     height: 37px;
-    top: 20px;
-    left: 83px;
-    border-radius: 1px solid #373867;
+    margin-top: 20px;
+    border: 1px solid #373867;
+    border-radius: 4px;
 }
-#check1 text{
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 13px;
-    line-height: 15px;
-    color: #000000;
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
 }
-#check2 text{
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 13px;
-    line-height: 15px;
-    color: #000000;
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
 }
-
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+input:checked+.slider {
+    background-color: #373867;
+}
+input:focus+.slider {
+    box-shadow: 0 0 1px #373867;
+}
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+.slider.round {
+    border-radius: 34px;
+}
+.slider.round:before {
+    border-radius: 50%;
+}
 .form-inscr p{
     font-family: 'K2D';
     font-style: normal;
@@ -362,7 +388,6 @@ main section{
     line-height: 21px;
     align-items: center;
     color: #000000;
-
 }
 #enter-text{
     height: 323px;
@@ -372,13 +397,20 @@ main section{
     border-radius: 4px;
 }
 .send-form{
+    position: absolute;
+    top: 630px;
+    left: 0px;
+    padding: 0;
     background-color: #479679;
     color: #000;
     padding: 10px 15px;
     border: none;
 }
 .company-mission{
+    margin-bottom: 50px;
+    top: 50px;
     position: relative;
+    background: linear-gradient(180deg, rgba(222, 239, 241, 0.79) 0%, rgba(222, 239, 240, 0.79) 18.75%, rgba(229, 242, 244, 0.79) 35.94%, rgba(203, 228, 216, 0.1027) 58.33%, rgba(255, 255, 255, 0) 83.85%);
 }
 #company-title{
     display: inline-block;
@@ -387,7 +419,7 @@ main section{
     margin: 80px 825px 29px 56px;
     font-weight: 700px;
     font-weight: 700;
-    font-family: 'Roboto';
+    font-family: 'Roboto', sans-serif;
     font-size: 20.5273px;
     line-height: 24px;
     color: #000000;
@@ -483,7 +515,7 @@ main section{
     display: inline-block;
     width: 769px;
     margin: 40px 0 0 49px;
-    font-family: 'Roboto';
+    font-family: 'Roboto', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 22px;
@@ -502,7 +534,7 @@ main section{
     height: 1376px;
 }
 .our-products h2{
-    font-family: 'Inter';
+    font-family: 'Inter', sans-serif;    
     font-style: normal;
     font-weight: 700;
     font-size: 30px;
@@ -530,7 +562,7 @@ main section{
     font-size: 24.4762px;
     line-height: 30px;
     text-align: start;
-    font-family: 'Inter';
+    font-family: 'Inter', sans-serif;    
     font-style: normal;
     font-weight: 700;
     font-size: 21.3846px;
@@ -538,7 +570,7 @@ main section{
     color: #000000;
 }
 .our-products p{
-    font-family: 'Inter';
+    font-family: 'Inter', sans-serif;    
     font-style: normal;
     font-weight: 400;
     font-size: 19.581px;
@@ -550,7 +582,7 @@ main section{
     padding-left: 165px;
     height: 20px;
     text-align: start;
-    font-family: 'Inter';
+    font-family: 'Inter', sans-serif;    
     font-style: normal;
     list-style-type: circle;
     list-style-position: inside;
@@ -558,12 +590,11 @@ main section{
     font-size: 14.6857px;
     line-height: 18px;
     color: #000000;
-
 }
 .company{
     position: relative;
-    top: 49px;
-    font-family: 'Inter';
+    top: 115px;
+    font-family: 'Inter', sans-serif;    
     font-style: normal;
     color: #000;
 }
@@ -584,8 +615,39 @@ main section{
     margin: 18px 0 0 24px;
     font-size: 26px;
     line-height: 31px;
+    font-family: 'Inter', sans-serif;    
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 31px;
+    color: #000000;
+}
+.company p{
+    position: absolute;
+    display: inline-block;
+    margin: 75px 0 0 435px;
+    width: 507px;
+    left: 148px;
+    font-family: 'Inter', sans-serif;    
+    font-size: 20px;
+    line-height: 24px;
+}
+#article2 img{
+    position: absolute;
+    margin-left: 600px;
+}
+#article2 h3{
+    text-align: right;
+    left: 180px;
+}
+#article2 p{
+    margin: 75px 0 0 0px;
+    width: 540px;
+    left: 106px;
+    text-align: right;
 }
 .company img{
+    box-sizing: border-box;
     width: 477px;
     height: 304px;
 }
@@ -595,7 +657,8 @@ main section{
     left: 50px;
 }
 .support h2{
-    font-family: 'Inter';
+    height: 51px;
+    font-family: 'Inter', sans-serif;    
     font-style: normal;
     font-weight: 700;
     font-size: 30px;
@@ -617,7 +680,7 @@ main section{
     position: absolute;
     margin: 0 0 0 92px;
     width: 448px;
-    font-family: 'Inter';
+    font-family: 'Inter', sans-serif;    
     font-style: normal;
     font-weight: 500;
     font-size: 23px;
@@ -634,8 +697,8 @@ main section{
 .tutorials h2{
     height: 27px;
     margin: 74px 0 0 0; 
-    font-family: 'Inter';
-    font-style: italic;
+    font-family: 'Inter', sans-serif;    
+    font-style: italic;    
     font-weight: 700;
     font-size: 34px;
     line-height: 41px;
@@ -644,8 +707,8 @@ main section{
 .tutorials ol{
     margin: 49px 0 0 105px;
     list-style: decimal;
-    font-family: 'Inter';
-    font-style: italic;
+    font-family: 'Inter', sans-serif;
+    font-style: italic;    
     font-weight: 700;
     font-size: 26px;
     line-height: 31px;
@@ -663,7 +726,7 @@ main section{
     border-radius: 30px;
 }
 .youtube-bt button a{
-    font-family: 'Inter';
+    font-family: 'Inter', sans-serif;    
     font-style: italic;
     font-weight: 700;
     font-size: 26px;
@@ -671,14 +734,13 @@ main section{
     color: #FFFFFF;
     text-decoration: none;
 }
-/* FOOTER */
-
 footer{
     display: block;
     text-align: center;
 }
 footer .social-links{
     margin: 391px 0 0 253px;
+    padding: 13px;
     width: 1259px;
     height: 74px;
     background: #373867;
@@ -687,10 +749,16 @@ footer .social-links a{
     padding: 80px;
 }
 footer p{
-    font-family: 'Inter';
+    position: absolute;
+    margin: 96px 0 14px 791px;
+    font-family: 'Inter', sans-serif;    
     font-style: normal;
     font-weight: 700;
     font-size: 14px;
     line-height: 17px;
     text-align: center;
+}
+footer .copy{
+    position: absolute;
+    margin: 133px 0 0 646px;
 }

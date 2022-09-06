@@ -6,6 +6,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./css/reset.css">
         <link rel="stylesheet" href="./css/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
         <title>Trackgenix</title>
     </head>
     <body>
@@ -171,14 +177,24 @@
                         <option value="systems">Systems</option>
                         <option value="merch">Merchandising</option>
                     </select>
-                    <input type="checkbox" id="check1" name="email" value="email">
-                    <label for="email"> Email me a Copy</label>
-                    <input type="checkbox" id="check2" name="terms" value="terms">
-                    <label for="terms"> I am a human and I accept terms of service </label>
+                    <div>
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider round"></span>
+                        </label>
+                        <label for="email"> Email me a Copy</label>
+                    </div>
+                    <div>
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider round"></span>
+                        </label>
+                        <label for="terms"> I am a human and I accept terms of service </label>
+                    </div>
                     <p>
                         Text
                     </p>
-                    <input type="text" id="enter-text" name="enter-text" value="Text" >
+                    <input type="text" id="enter-text" name="enter-text">
                     <button class="send-form">
                         Send
                     </button>
@@ -218,12 +234,13 @@
                             About Us
                         </h2>
                         <p>
-                            RadiumRocket developed TrackGenix as a software solution for optimal time-tracking and project
+                            RadiumRocket developed TrackGenix as a software solution for optimal
+                            time-tracking and project
                             management as a request for one of its most trusted clients, GigaTech Software Solutions,
                             in late 2021, and swiftly became one of the most requested services in all of the
                             million-dollar South American productivity industry. 
-                            RadiumRocket are a group of passionate people fond of the latest cutting edge technologies in
-                            software development.
+                            RadiumRocket are a group of passionate people fond of the latest cutting 
+                            edge technologies in software development.
                             They position ourselves at your side through all the process of development being
                             responsible and co-workers with you to successfully get your product moving.
                         </p>
@@ -307,7 +324,7 @@
                         in more than 1,200 cities around the world.
                     </p>
                 </article>
-                <article>
+                <article id="article2">
                     <img src="../Semana-01/assets/people-working.jpg" alt="people">
                     <h3>
                         An inclusive workplace for everyone
@@ -326,7 +343,8 @@
                     </h3>
                     <p>
                         Trackgenix was created remotely in 2008 by Yves Hiernaux and Mic Cvilic after
-                        many years of working with hard-to-manage and even harder-to-understand reports and timesheets.
+                        many years of working with hard-to-manage and even harder-to-understand
+                        reports and timesheets.
                         Although we have grown, we continue with the same goal of offering a flexible,
                         reliable and easy-to-use time control tool.
                     </p>
@@ -376,13 +394,13 @@
             <div class="social-links">
                 <a href="https://www.facebook.com"><img src="../Semana-01/assets/fb.svg" alt="fb logo"></a>
                 <a href="https://www.twitter.com"><img src="../Semana-01/assets/twitter.svg" alt="tw logo"></a>
-                <a href="https://www.instagram.com"><img src="../Semana-01/assets/insta.svg" alt="int logo"></a>
+                <a href="https://www.instagram.com"><img src="../Semana-03/assets/insta-logo.png" alt="int logo"></a>
                 <a href="https://www.linkedin.com"><img src="../Semana-01/assets/linkdin.svg" alt="link logo"></a>
             </div>
             <p>
                 Rosario Argentina
             </p>
-            <p>
+            <p class="copy">
                 Copyright © 2022 GigaTech Software Solutions. All rights reserved.
             </p>
         </footer>                      
