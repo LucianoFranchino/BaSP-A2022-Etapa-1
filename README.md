@@ -69,9 +69,21 @@ I work whit my teammates in Admin and Super-Admin screens
 
 The problem of week 02 consists of creating an HTML document that has the same content as the landing of the screenflow of the first week, respecting the semantic elements of HTML and saving the progress in a public Github repository.
 
+```
+The work done can be seen in the file "index.html"
+```
+
 ***
 ## Week 3 📅​
 
+The problem of week 03 consists of including the styles corresponding to the HTML structure of week 02 to achieve that when viewing the page.
+The landing has to be visualized as accurately as possible to the one designed in figma, even with their respective functions.
+
+```
+The work done can be seen in the file "style.css"
+```
+
+***
 ## Week 4 📅​
 
 ## Week 5 📅​
