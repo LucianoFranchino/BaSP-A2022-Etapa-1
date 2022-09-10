@@ -1,0 +1,32 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px;
+    height: 91px;
+    background-color: #373867;
+    border: 1px solid #000;
+}
+h1{
+    color: #46A07B;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 70px;
+}
+#navbar{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 88px;
+    width: 70%;
+    float: right;
+}
+@media(max-width: 768px) {
+    nav{
+        display: none;
+    }
+    
+}
+
+
