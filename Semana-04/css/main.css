@@ -234,11 +234,78 @@ main{
 }
 .products-box p{
     text-align: left;
+    padding: 20px;
 }
 .products-box ul{
     text-align: left;
+    padding: 20px;
 }
 .products-box ul li{
     list-style-type: circle;
     list-style-position: inside;
+}
+.company-box article{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+.company-box img{
+    width: 235px;
+    height: 139px;
+    border: 0.178402px solid #000000;
+}
+.company-box h3{
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+}
+.company-box p{
+    font-size: 13px;
+    line-height: 16px;
+}
+#article2{
+    align-items: flex-end;
+    text-align: right;
+}
+.support article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+.support p{
+    text-align: center;
+}
+.support img{
+    width: 296px;
+    height: 195px;
+    padding: 20px;
+}
+.tutorials article{
+    display: flex;
+    flex-direction: column;
+}
+.tutorials ol{
+    padding: 30px;
+    list-style: decimal;
+    font-style: italic;    
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 23px;
+}
+.youtube-bt button{
+    width: 80%;
+    height: 116px;
+    background: #98220D;
+    box-shadow: 0px 4px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+}
+.youtube-bt button a{
+    font-family: 'Inter', sans-serif;    
+    font-style: italic;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 31px;
+    color: #FFFFFF;
+    text-decoration: none;
 }
