@@ -6,21 +6,17 @@ header{
     height: 91px;
     background-color: #373867;
     border: 1px solid #000;
+    z-index: 3;
 }
 h1{
     color: #46A07B;
     text-transform: uppercase;
     font-weight: 700;
-    font-size: 60px;
-    line-height: 70px;
+    font-size: 30px;
+    line-height: 35px;
 }
 #navbar{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 88px;
-    width: 70%;
-    float: right;
+    
 }
 @media(max-width: 768px) {
     nav{
