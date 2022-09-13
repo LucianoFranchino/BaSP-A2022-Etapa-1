@@ -15,4 +15,8 @@
     text-align: center;
     padding: 20px;
 }
-
+@media(min-width: 768px){
+    footer{
+        margin-left: 30%;
+    }
+}

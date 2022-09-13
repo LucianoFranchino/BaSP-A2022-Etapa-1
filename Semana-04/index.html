@@ -20,18 +20,17 @@
     </head>
     <body>
         <header>
-            <div>
+            <div class="logo-container">
                 <img src="./assets/radium-logo.png" alt="Logo" class="logo">
             </div>
-            <div>
+            <div class="title-container">
                 <h1>
                     Trackgenix
                 </h1>
             </div>
-            <div>
-                <img src="./assets/hamburguer-menu.png" alt="hamburguer-menu">
+            <div class="logo-container">
+                <img src="./assets/hamburguer-menu.png" alt="hamburguer-menu" class="hamburguer">
             </div>
-            <div id="navbar">
                 <nav>
                     <ul>
                         <li>
@@ -54,7 +53,6 @@
                         </li>
                     </ul>
                 </nav>
-            </div>
         </header>
         <aside> 
             <form action="search">
@@ -96,7 +94,8 @@
                     </div> 
                     <div>             
                         <p>
-                            “TRACKGENIX” is a revolutionary system designed for GigaTech Software Solutions SA. 
+                            “TRACKGENIX” is a revolutionary system designed for GigaTech Software Solutions
+                            SA. 
                             This system will allow them to efficiently manage their proyects, schedule flow,
                             selected work teams and much more
                         </p>
@@ -105,7 +104,7 @@
                 </div>
             </section> 
             <section class="aplications-features">
-                 <h2>
+                <h2>
                     Aplications Features
                 </h2>
                     <div>
@@ -141,85 +140,98 @@
                 <h2>
                     Why You Should Use Trackgenix?
                 </h2>
-                <div class="why-container">
-                 
+                <div class="container-general-why">
+                    <div class="why-container">
+                            <div class="why-items">
+                                <div class="img-back">
+                                    <img src="../Semana-01/assets/productivity.png" alt="booster">
+                                </div>
+                            </div>
+                            <div class="why-items-text">
+                                <h3>
+                                    Productivity Booster
+                                </h3>
+                                <p>
+                                    Be more productive using better Focus, Time Management,Organization and
+                                    Efficiency
+                                </p>
+                            </div>                  
+                    </div>
+                    <div class="why-container">                   
+                            <div class="why-items">
+                                <div class="img-back">
+                                    <img src="../Semana-01/assets/traceability.png" alt="traceability">
+                                </div>
+                            </div>
+                            <div class="why-items-text">
+                                <h3>
+                                    Work traceability
+                                </h3>
+                                <p>
+                                    Keep track of specs, changes, requests, results, and versions
+                                </p>
+                            </div>                  
+                    </div>
+                    <div class="why-container">                 
+                            <div class="why-items">
+                                <div class="img-back">
+                                    <img src="../Semana-01/assets/leadership-and-team-management.png" 
+                                    alt="team-management">
+                                </div>
+                            </div>
+                            <div class="why-items-text">
+                                <h3>
+                                    Leadership and team management
+                                </h3>
+                                <p>
+                                    Lead a group of people in accomplishing a task or common goal.
+                                    Effective team management involves supporting,
+                                    communicating with and uplifting team members so they perform to the best
+                                    of their abilities and continue to grow as professionals.
+                                </p>
+                            </div>                    
+                    </div>
+                    <div class="why-container">                   
                         <div class="why-items">
-                            <img src="../Semana-01/assets/productivity.png" alt="booster">
+                            <div class="img-back">
+                                <img src="../Semana-01/assets/decisions.png" alt="decision">
+                            </div>
                         </div>
-                        <div class="why-items">
-                            <h3>
-                                Productivity Booster
-                            </h3>
-                            <p>
-                                Be more productive using better Focus, Time Management,Organization and Efficiency
-                            </p>
-                        </div>                  
-                </div>
-                <div class="why-container">                   
-                        <div class="why-items">
-                            <img src="../Semana-01/assets/traceability.png" alt="traceability">
-                        </div>
-                        <div class="why-items">
-                            <h3>
-                                Work traceability
-                            </h3>
-                            <p>
-                                Keep track of specs, changes, requests, results, and versions
-                            </p>
-                        </div>                  
-                </div>
-                <div class="why-container">                 
-                        <div class="why-items">
-                            <img src="../Semana-01/assets/leadership-and-team-management.png" alt="team-management">
-                        </div>
-                        <div class="why-items">
-                            <h3>
-                                Leadership and team management
-                            </h3>
-                            <p>
-                                Lead a group of people in accomplishing a task or common goal.
-                                Effective team management involves supporting,
-                                communicating with and uplifting team members so they perform to the best of their 
-                                abilities and continue to grow as professionals.
-                            </p>
-                        </div>                    
-                </div>
-                <div class="why-container">                   
-                        <div class="why-items">
-                            <img src="../Semana-01/assets/decisions.png" alt="decision">
-                        </div>
-                        <div class="why-items">
+                        <div class="why-items-text">
                             <h3>
                                 Decision making
                             </h3>
                             <p>
                                 Make better decisions for your business
                             </p>
-                        </div>                   
-                </div>
+                        </div>
+                    </div>
+                </div>                   
             </section>
             <section class="inscription">
                 <h2>
                     Inscription Form
                 </h2>
                 <form action="/inscription" class="form-inscr">
-                    <div class="form-inputs">
-                        <input type="text" id="name" name="name" value="Name" >
-                        <input type="text" id="email" name="email" value="Email">
+                        <div class="input-box">
+                            <input type="text" id="name" name="name" value="Name" >
+                            <input type="text" id="email" name="email" value="Email">
+                        </div>
                         <select id="contact" name="Contact Area">
                             <option value="-Choose a Contact Area -">-Choose a Contact Area -</option>
                             <option value="human">Human Resources</option>
                             <option value="systems">Systems</option>
                             <option value="merch">Merchandising</option>
                         </select>
-                    </div>
-                    <div class="form-check">
-                            <input type="checkbox" checked>
-                        <label for="email"> Email me a Copy</label>
-                    </div>
-                    <div class="form-check">
-                            <input type="checkbox" checked>
-                        <label for="terms"> I am a human and I accept terms of service </label>
+                    <div class="checks-box">
+                        <div class="form-check">
+                                <input type="checkbox" checked>
+                            <label for="email"> Email me a Copy</label>
+                        </div>
+                        <div class="form-check">
+                                <input type="checkbox" checked>
+                            <label for="terms"> I am a human and I accept terms of service </label>
+                        </div>
                     </div>
                     <p>
                         Text
@@ -268,9 +280,9 @@
                         <p>
                             RadiumRocket developed TrackGenix as a software solution for optimal
                             time-tracking and project
-                            management as a request for one of its most trusted clients, GigaTech Software Solutions,
-                            in late 2021, and swiftly became one of the most requested services in all of the
-                            million-dollar South American productivity industry. 
+                            management as a request for one of its most trusted clients, GigaTech Software
+                            Solutions, in late 2021, and swiftly became one of the most requested services
+                            in all of the million-dollar South American productivity industry. 
                             RadiumRocket are a group of passionate people fond of the latest cutting 
                             edge technologies in software development.
                             They position ourselves at your side through all the process of development being
@@ -285,63 +297,64 @@
                         Our Products
                     </h2>
                 <div class="products-box">
-                    <article>
-                        <img src="../Semana-01/assets/screen3.png" alt="employee">
-                        <h3>
-                            Employee time control from any place and device 
-                        </h3>
-                        <p>
-                            A single app for recording the day of any situacion:
-                        </p>
-                        <ul>
-                            <li>Web</li>
-                            <li>Mobile App</li>
-                            <li>Kiosk whit tablet</li>
-                            <li>Boimetric recognition devices</li>
-                        </ul>
-                    </article>
-                    <article>
-                        <img src="../Semana-01/assets/screen4.png" alt="working-day">
-                        <h3>
-                            Customized working day registration policies
-                        </h3>
-                        <p>
-                            Customize the mandatory registration of the working day with a completely flexible app to
-                            clock in at work. Apply more respective measures: 
-                        </p>
-                        <ul>
-                            <li>Expected transfers in one click </li>
-                            <li>Weekly massive transfer</li>
-                            <li>Flexible entry and exit</li>
-                        </ul>
-                    </article>
-                    <article>
-                        <img src="../Semana-01/assets/screen5.png" alt="control-app">
-                        <h3>
-                            The most intuitive time control app
-                        </h3>
-                        <p>
-                            Registration of the day from anywhere to promote teleworking and self-management of time
-                        </p>
-                        <ul>
-                            <li>24 hours access from anywhere</li>
-                            <li>Geolocated transfer detection system</li>
-                            <li>Instant notifications and alerts</li>
-                        </ul>
-                    </article>
-                    <article>
-                        <img src="../Semana-01/assets/screen2.png" alt="management">
-                        <h3>
-                            Project Management Done Well
-                        </h3>
-                        <p>
-                            Advanced controls and features to effortlessly control all your projects
-                        </p>
-                        <ul>
-                            <li>Browse between different pojects</li>
-                            <li>Equipped whit graphs and tables</li>
-                        </ul>
-                    </article>
+                        <article>
+                            <img src="../Semana-01/assets/screen3.png" alt="employee">
+                            <h3>
+                                Employee time control from any place and device 
+                            </h3>
+                            <p>
+                                A single app for recording the day of any situacion:
+                            </p>
+                            <ul>
+                                <li>Web</li>
+                                <li>Mobile App</li>
+                                <li>Kiosk whit tablet</li>
+                                <li>Boimetric recognition devices</li>
+                            </ul>
+                        </article>
+                        <article class="the-most">
+                            <img src="../Semana-01/assets/screen4.png" alt="working-day">
+                            <h3>
+                                Customized working day registration policies
+                            </h3>
+                            <p>
+                                Customize the mandatory registration of the working day with a completely
+                                flexible app to clock in at work. Apply more respective measures: 
+                            </p>
+                            <ul>
+                                <li>Expected transfers in one click </li>
+                                <li>Weekly massive transfer</li>
+                                <li>Flexible entry and exit</li>
+                            </ul>
+                        </article>                   
+                        <article >
+                            <img src="../Semana-01/assets/screen5.png" alt="control-app">
+                            <h3>
+                                The most intuitive time control app
+                            </h3>
+                            <p>
+                                Registration of the day from anywhere to promote teleworking and self-management
+                                of time
+                            </p>
+                            <ul>
+                                <li>24 hours access from anywhere</li>
+                                <li>Geolocated transfer detection system</li>
+                                <li>Instant notifications and alerts</li>
+                            </ul>
+                        </article>
+                        <article>
+                            <img src="../Semana-01/assets/screen2.png" alt="management">
+                            <h3>
+                                Project Management Done Well
+                            </h3>
+                            <p>
+                                Advanced controls and features to effortlessly control all your projects
+                            </p>
+                            <ul>
+                                <li>Browse between different pojects</li>
+                                <li>Equipped whit graphs and tables</li>
+                            </ul>
+                        </article>                  
                 </div>
             </section>    
             <section class="company">
@@ -409,17 +422,46 @@
                         <h2>
                             Tutorials
                         </h2>
-                        <ol>
-                            <li>"TrackGenix: Quick Start Guide " 05:10</li>
-                            <li>"How to setup TrackGenix for you company: In depth guide" 31:02</li>
-                            <li>"Project management using TrackGenix" 22:15</li>
-                            <li>"Unlocking Max Productivity: Advance tips and Tricks for Workers" 12:40</li>
-                            <li>"Reports Reviews Guide" 09:10</li>
-                            <li>"Google calendar & other web services integration" 11:25</li>
-                        </ol>
+                        <div class="list-videos">
+                            <ol>
+                                <li>
+                                    <div>
+                                        "TrackGenix: Quick Start Guide" <span>05:10</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        "How to setup TrackGenix for you company: In depth guide"
+                                        <span>31:02</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        "Project management using TrackGenix" <span>22:15</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        "Unlocking Max Productivity: Advance tips and Tricks for Workers"
+                                        <span>12:40</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        "Reports Reviews Guide" <span>09:10</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        "Google calendar & other web services integration" <span>11:25</span>
+                                    </div>
+                                </li>
+                            </ol>
+                        </div>
                         <div class="youtube-bt">
                             <button>             
-                                <a href="https://www.youtube.com" target="_blank">Browse Full Playlist on Youtube</a>
+                                <a href="https://www.youtube.com" target="_blank">Browse Full Playlist 
+                                on Youtube</a>
                             </button>
                         </div> 
                     </article>
@@ -428,10 +470,14 @@
         </main>
         <footer>
             <div class="social-links">
-                <a href="https://www.facebook.com"><img src="../Semana-01/assets/fb.svg" alt="fb logo"></a>
-                <a href="https://www.twitter.com"><img src="../Semana-01/assets/twitter.svg" alt="tw logo"></a>
-                <a href="https://www.instagram.com"><img src="../Semana-03/assets/insta-logo.png" alt="int logo"></a>
-                <a href="https://www.linkedin.com"><img src="../Semana-01/assets/linkdin.svg" alt="link logo"></a>
+                <a href="https://www.facebook.com"><img src="../Semana-01/assets/fb.svg" 
+                alt="fb logo"></a>
+                <a href="https://www.twitter.com"><img src="../Semana-01/assets/twitter.svg" 
+                alt="tw logo"></a>
+                <a href="https://www.instagram.com"><img src="../Semana-03/assets/insta-logo.png" 
+                alt="int logo"></a>
+                <a href="https://www.linkedin.com"><img src="../Semana-01/assets/linkdin.svg" 
+                alt="link logo"></a>
             </div>
             <div class="copyright">
                 <p>

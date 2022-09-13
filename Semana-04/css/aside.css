@@ -1,3 +1,56 @@
+aside{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    height: 100%;
+    top: 104px;
+    background-color: rgba(55, 56, 103, 0.1);
+    z-index: 3;
+}
+aside input{
+    height: 30.49px;
+    border-radius: 3.418px;
+    background: #FFFFFF;
+}
+aside h2{
+    margin-bottom: 0px;
+}
+aside ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 25px;
+}
+aside ul li{
+    padding: 10px;
+    border-bottom: 1px solid #000;
+}
+aside ul li a{
+    text-align: center;
+    color: #479679;
+    font-size: 16px;
+    text-decoration: none;
+}
+aside ul button{
+    padding: 0;
+    border: none;
+    background: none;
+    font: inherit;
+    outline: inherit;
+}
+aside img{
+    width: 60px;
+    height: 67.12px;
+}
+aside p{
+    padding: 10px;
+    font-size: 11px;
+    line-height: 13px;
+    text-align: center;
+    color: black;
+}
 @media(max-width: 768px){
     aside{
         display: none;

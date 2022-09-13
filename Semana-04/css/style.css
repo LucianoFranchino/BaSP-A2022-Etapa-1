@@ -3,14 +3,12 @@ html{
     font-size: normal;
     color: #373867;
 }
-a{
-    text-decoration: none;
-    color: #373867;
+html, body{
+    overflow-x: hidden;
 }
-
-.logo{
-    width: 58.66px;
-    height: 67px;
+a{
+    color: #373867;
+    text-decoration: none;
 }
 main section{
     border-bottom: 2px solid #000;
@@ -21,7 +19,11 @@ h2{
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
-    line-height: 21px;
-    color: #373867;
     text-align: center;
+    color: #373867;
+    line-height: 21px;
+}
+.logo{
+    width: 58.66px;
+    height: 67px;
 }

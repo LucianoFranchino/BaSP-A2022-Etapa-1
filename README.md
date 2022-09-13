@@ -14,6 +14,12 @@ This project is part of the bootcamp "Become a Software Professional" of Radium 
 1- In GitHub repository open the folder "Semana-01"
 2- Open the file Index.html on your browser
 ```
+# Webside 🔎​
+
+Here you can see the webside, using GitHub Pages!
+
+
+> https://lucianofranchino.github.io/BaSP-A2022-Etapa-1/Semana-04/index.html
 
 # Cloning Repo 📥
 If you want to work or download this project:
@@ -85,6 +91,11 @@ The work done can be seen in the file "style.css"
 
 ***
 ## Week 4 📅​
+
+For the week 04 we had to replicate the landing page of the screenflow of week 01 using Flexbox as the main tool for the creation of a Responsive Design following the concept of Mobile First.
+
+To work on the css we had to split the sections into different files respectively to style them. For example main.css, footer.css or aside.css.
+
 
 ## Week 5 📅​
 
