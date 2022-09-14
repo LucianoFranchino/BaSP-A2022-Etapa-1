@@ -27,6 +27,11 @@
     rgba(71, 147, 129, 0.1343) 35.94%, rgba(165, 207, 187, 0.1027) 58.33%, rgba(255, 255, 255, 0) 83.85%);
     filter: blur(0.25px);
 }
+.welcome-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .welcome-section img{
     width: 255px;
     height: 139px;
@@ -115,6 +120,7 @@
     border-radius: 4px;
 }
 #contact{
+    height: 33px;
     width: 80%;
     border: 1px solid #373867;
     border-radius: 4px;
@@ -143,7 +149,7 @@
     color: #000000;
 }
 #enter-text{
-    height: 80%;
+    height: 100px;
     top: 80px;
     border-radius: 4px;
 }
@@ -355,6 +361,10 @@
         flex-wrap: wrap;
         height: 900px;
         width: 50%;
+    }
+    .welcome-content{
+        display: flex;
+        flex-direction: row-reverse;
     }
     .the-most{
         order: 1;

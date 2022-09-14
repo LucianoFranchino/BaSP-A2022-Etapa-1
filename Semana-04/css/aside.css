@@ -9,6 +9,9 @@ aside{
     background-color: rgba(55, 56, 103, 0.1);
     z-index: 3;
 }
+aside form{
+    padding: 15px;
+}
 aside input{
     height: 30.49px;
     border-radius: 3.418px;
