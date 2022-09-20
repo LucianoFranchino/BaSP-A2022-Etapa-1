@@ -67,7 +67,7 @@ function validateNumbersTwo (a){
         alert('Error, must be numbers');
         return NaN;
     } else if(!validateInteger(a)){
-        alert('no es entero');
+        alert('In not round');
         return Math.round(a);
     }
     return a;
