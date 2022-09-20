@@ -1,6 +1,6 @@
 aside{
     position: fixed;
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     width: 30%;
@@ -13,21 +13,29 @@ aside form{
     padding: 15px;
 }
 aside input{
+    width: 236px;
     height: 30.49px;
     border-radius: 3.418px;
-    background: #FFFFFF;
+    background: url(../assets/search-logo.png) #FFFFFF no-repeat right;
+    background-size: 20px;
 }
-aside h2{
-    margin-bottom: 0px;
+.aside-menu-title{
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
 }
 aside ul{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 25px;
+    margin-bottom: 130px;
 }
 aside ul li{
-    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 46px;
+    width: 142px;
     border-bottom: 1px solid #000;
 }
 aside ul li a{
@@ -54,8 +62,9 @@ aside p{
     text-align: center;
     color: black;
 }
-@media(max-width: 768px){
+@media(min-width: 768px){
     aside{
-        display: none;
+        display: flex;
+        max-width: 320px;
     }
 }

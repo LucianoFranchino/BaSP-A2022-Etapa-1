@@ -23,6 +23,13 @@ h2{
     color: #373867;
     line-height: 21px;
 }
+.h2-secondary{
+    width: 195px;
+    height: 30px;
+    font-size: 20.5273px;
+    text-decoration: underline;
+    color: #000000;
+}
 .logo{
     width: 58.66px;
     height: 67px;
