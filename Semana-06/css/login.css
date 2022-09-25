@@ -50,6 +50,9 @@ fieldset{
 .green-border{
     border: 2px solid green;
 }
+.red-border{
+    border: 2px solid red;
+}
 .mensage-error{
     color: red;
 }

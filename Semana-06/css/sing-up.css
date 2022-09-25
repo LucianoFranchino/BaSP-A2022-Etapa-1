@@ -1,0 +1,24 @@
+fieldset{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+}
+.sing-up-title{
+    padding: 20px;
+    font-size: 25px;
+}
+.sing-up-btn{
+    height: 50px;
+    width: 50%;
+    padding: 1rem 2rem;
+    border-radius: 15px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+    background: #AACE9B;
+    color: white;
+}
