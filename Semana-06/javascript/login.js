@@ -3,6 +3,7 @@ window.onload = function(){
     var emailExpression = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
     var emailInput = document.getElementById("email-input");
     var errorWarning = document.createElement('p');
+    var loginButton = document.getElementById('login-button')
     errorWarning.classList.add("mensage-error");
 
     emailInput.onblur = function(){
@@ -24,42 +25,33 @@ window.onload = function(){
         errorWarning.remove();
     }
 
-    var numbers = [0,1,2,3,4,5,6,7,8,9];
-    var letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'ñ', 'o', 'p', 'q', 'r', 
-    's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'Y', 'J', 'K', 'L', 'M', 'N', 
-    'Ñ', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']; 
-    var isNumber = false;
-    var isLetter = false;
     var passwordInput = document.getElementById('password-input');
-    var errorWarningPassword = document.createElement('p');
-    errorWarningPassword.classList.add('mesage-error');
 
     passwordInput.onblur = function(){
-        for(var i= 0; i<passwordInput.value.length; i++){
-            for(var j=0; j<numbers.value.length; j++){
-                if(passwordInput[i] == numbers[j]){
-                    isNumber=true;
-                    console.log(passwordInput[i],'es numero');
-                }
+        var hasNumber = 0;
+        var hasLetter = 0;
+        for(var i=0; i < passwordInput.value.length; i++ ){
+            if(isNaN(passwordInput.value[i])){
+                hasLetter += 1;
+            }else{
+                hasNumber += 1;
             }
         }
-        for(var i= 0; i<passwordInput.value.length; i++){
-            for(var j=0; j<letters.value.length; j++){
-                if(passwordInput[i] == letters[j]){
-                    isLetter=true;
-                    console.log(passwordInput[j],'es letra');
-                }    
-            }
-        }
-        if(passwordInput.value <= 4){
+        if(hasLetter === 0 || hasNumber === 0 ){
+            console.log(hasLetter, hasNumber);
             passwordInput.classList.add('red-border');
-            errorWarningPassword.textContent = 'Password most contain more of 4 characters';
-            passwordInput.insertAdjacentElement('afterend', errorWarningPassword);
-        }else if(!numbers(passwordInput.value)){
-            passwordInput.classList.add('red-border');
-            errorWarningPassword.textContent = 'Password most contain one number';
-            passwordInput.insertAdjacentElement('afterend', errorWarningPassword);
+            errorWarning.textContent = 'Password most contain more of 4 characters, letters and numbers';
+            passwordInput.insertAdjacentElement('afterend', errorWarning);
+        }else{
+            passwordInput.classList.add('green-border');
         }
-        
     }
+    passwordInput.onfocus = function(){
+        passwordInput.classList.remove('red-border');
+        passwordInput.classList.remove('green-border');
+        errorWarning.remove();
+    }
+
+    
+
 }
