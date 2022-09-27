@@ -105,12 +105,12 @@ Secondly, they gave us a series of exercises to solve in javascript, applying wh
 
 index.html
 exercises/
-    -01_variables_and_operators.js
-    -02_strings.js
-    -03_arrays.js
-    -04_if_else.js
-    -05_for.js
-    -06_functions.js
+ - 01_variables_and_operators.js
+ - 02_strings.js
+ - 03_arrays.js
+ - 04_if_else.js
+ - 05_for.js
+ - 06_functions.js
 
 ### The page i work on
 
@@ -119,6 +119,40 @@ exercises/
 ***
 ## Week 6 📅​
 
+In week six we worked more in depth with JavaScript, using the DOM interface (Document Object Model).
+The problem was to create the login and register pages in html and css respectively. Then with Js we had to do the validations in the forms. 
+The validation of each field must be done in the "blur" event of each of the fields. In addition, if any field has a validation error, in the "focus" event of that field the message must disappear because it is assumed that the user is correcting the error.
+
+The screens to develop were:
+
+### Login
+
+All fields are required.
+
+- [Email] - Must have a valid email format.
+- [Password] - Formed by letters and numbers.
+
+### Employee Signup
+
+All fields are required.
+
+- [First Name] - Letters only and must have more than 3 letters.
+- [Surname] - Letters only and must have more than 3 letters.
+- [DNI] - Only number and must have more than 7 numbers.
+- [Date of Birth] - With format dd/mm/yyyy.
+- [Telephone] - Only number and must have 10 numbers.
+- [Adress] - At least 5 characters with letters, numbers and a space in the middle.
+- [City] - Alphanumeric text and must have more than 3 letters.
+- [PostCode] - Only number and must have between 4 and 5 numbers.
+- [Email] - Must be in a valid email format.
+- [Password] -  At least 8 characters, consisting of letters and numbers.
+- [Repeat Password] -  At least 8 characters, consisting of letters and numbers.
+
+### The page i work on
+
+> https://lucianofranchino.github.io/BaSP-A2022-Etapa-1/Semana-06/views/index.html
+
+***
 ## Week 7 📅​
 
 ## Week 8 📅​
