@@ -1,15 +1,7 @@
 main{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
     height: 200vh;
 }
 .form-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     height: 850px;
     width: 450px;
     margin: 1rem;
@@ -28,6 +20,7 @@ fieldset{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
     padding: 10px;
 }
 .sing-up-title{
@@ -59,6 +52,14 @@ fieldset{
     border: 2px solid red;
 }
 .mensage-error{
+    padding: 0;
     font-size: 12px;
     color: red;
+}
+@media(min-width: 1200px) {
+    .column-form{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
 }
