@@ -3,7 +3,10 @@ main{
     align-items: center;
     justify-content: center;
     margin: 0;
-    height: 100vh;
+    height: 130vh;
+}
+form{
+    text-align: center;
 }
 .form-container{
     display: flex;
@@ -20,6 +23,7 @@ main{
 }
 .form-title{
     padding: 20px;
+    text-align: center;
     font-size: 25px;
 }
 fieldset{
@@ -30,8 +34,14 @@ fieldset{
     flex-direction: column;
     justify-content: space-between;
 }
-.dont-have-account{
-    display: flex;
+.dont-have-account p{
+    margin-right: 10px;
+}
+a{
+    text-decoration: underline;
+}
+a:hover{
+    color: blue;
 }
 .login-btn{
     height: 50px;
@@ -47,6 +57,9 @@ fieldset{
     background: #AACE9B;
     color: white;
 }
+.login-btn:hover{
+    background-color: green;
+}
 .green-border{
     border: 2px solid green;
 }
@@ -55,4 +68,9 @@ fieldset{
 }
 .mensage-error{
     color: red;
+}
+@media(min-width: 768px){
+    footer{
+        margin-left: min(30%, 320px);
+    }
 }

@@ -10,13 +10,19 @@ main{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 800px;
+    height: 850px;
     width: 450px;
     margin: 1rem;
     padding: 2rem;
     background-color: rgba(185, 185, 185, 0.8);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
     border-radius: 2px;
+}
+.have-account a{
+    text-decoration: underline;
+}
+.have-account a:hover{
+    color: blue;
 }
 fieldset{
     display: flex;
@@ -43,6 +49,9 @@ fieldset{
     background: #AACE9B;
     color: white;
 }
+.sing-up-btn:hover{
+    background-color: green;
+}
 .green-border{
     border: 2px solid green;
 }
@@ -50,5 +59,6 @@ fieldset{
     border: 2px solid red;
 }
 .mensage-error{
+    font-size: 12px;
     color: red;
 }
