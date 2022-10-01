@@ -157,6 +157,12 @@ window.onload = function(){
         errorWarning.remove();
     }
 
+    var year = date.value.substring(0 , date.value.indexOf('-'));
+    var month = date.value.substring(date.value.indexOf('-') + 1, date.value.indexOf('-') + 3);
+    var day = date.value.substring(date.value.indexOf('-')+ 4 , date.value.indexOf('-') + date.value.length);
+    var dateArr = [ month, day , year];
+    var finalDate = dateArr.join('/');
+
     var errorDate;
     dateInput.onblur = function() {
         if (dateInput.value == '') {
@@ -428,4 +434,22 @@ window.onload = function(){
         }
     }
 
+    function checkUrl(){
+    var urlSingUp = 'https://basp-m2022-api-rest-server.herokuapp.com/signup?name=' + nameInput.value + 
+    '&lastName=' + lastNameInput.value + '&dni=' + documentInput.value + '&dob=' + finalDate + 
+    '&phone='+ phoneNumberInput.value + '&address=' +adressInput.value + '&city=' + locationInput.value +
+    '&zip=' + postalCodeInput.value + '&email=' + emailInput.value + '&password=' + passwordInput.value +
+    '&repeatPassword' + repeatPasswordInput.value;
+
+    fetch(urlSingUp)
+        .then(function(entry){
+            return entry.json();
+        })
+        .then(function(data){
+            if(!data.success){
+                throw new Error(data.msg + '\n' + 'Succes: ' + '\n' + data.success);
+            }
+        })
+
+    }
 }

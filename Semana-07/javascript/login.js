@@ -57,7 +57,10 @@ window.onload = function(){
 
     loginButton.onclick = function(e){
         e.preventDefault();
-        if(errorAlert.length === 0){
+        if(emailInput.value == '' && passwordInput.value == ''){
+            alert('Complete empty fields')
+        }
+        else if(errorAlert.length === 0){
             checkUrl();
         }else{
             alert(errorAlert.join('-'));
