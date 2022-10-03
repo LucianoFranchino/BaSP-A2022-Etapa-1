@@ -155,6 +155,19 @@ All fields are required.
 ***
 ## Week 7 📅​
 
+This week's problem consists of extending the functionality of the forms created last week, by having the information uploaded in each form sent to a Web Server using Javascript's Fetch method. Depending on the result of that HTTP request, each form will display a different message. Information will also be stored in the LocalStorage to be used in the same forms at the time of loading each page.
+
+In the request the form data must be sent as "query-params".
+
+```
+.../login?name=juan&lastName=lopez&...
+````
+
+### The page i work on
+
+> https://lucianofranchino.github.io/BaSP-A2022-Etapa-1/Semana-07/views/index.html
+
+***
 ## Week 8 📅​
 
 ## Week 9 📅​
