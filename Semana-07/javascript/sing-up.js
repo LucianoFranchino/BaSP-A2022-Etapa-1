@@ -400,22 +400,39 @@ window.onload = function(){
         return saveError;
     }
 
+    function changeDate(changeDate){
+    var year = dateInput.value.substring(0 , dateInput.value.indexOf('-'));
+    var month = dateInput.value.substring(dateInput.value.indexOf('-') + 1, dateInput.value.indexOf('-') + 3);
+    var day = dateInput.value.substring(dateInput.value.indexOf('-')+ 4 , dateInput.value.indexOf('-') 
+    + dateInput.value.length);
+    var dateArr = [month, day , year];
+    var finalDate = dateArr.join('/');
+    return finalDate;
+    }
+    function dateFormat2(dates){
+        var [month,day,year] = dates.split('/');
+        var birthChange = [year,month,day].join('-');
+        return birthChange;
+    }
+
+    nameInput.value = localStorage.getItem('Name');
+    lastNameInput.value =localStorage.getItem('lastName');
+    documentInput.value =localStorage.getItem('dni');
+    dateInput.value = dateFormat2(localStorage.getItem('dob'));
+    phoneNumberInput.value =localStorage.getItem('phone');
+    adressInput.value =localStorage.getItem('address');
+    locationInput.value =localStorage.getItem('city');
+    postalCodeInput.value =localStorage.getItem('zip');
+    emailInput.value =localStorage.getItem('email');
+    passwordInput.value =localStorage.getItem('password');
+
     singUpBtn.onclick = function(e) {
         e.preventDefault();
-        var year = dateInput.value.substring(0 , dateInput.value.indexOf('-'));
-        var month = dateInput.value.substring(dateInput.value.indexOf('-') + 1, dateInput.value.indexOf('-') + 3);
-        var day = dateInput.value.substring(dateInput.value.indexOf('-')+ 4 , dateInput.value.indexOf('-') 
-        + dateInput.value.length);
-        var dateArr = [month, day , year];
-        var finalDate = dateArr.join('/');
-        console.log(year);
-        console.log(month);
-        console.log(day);
+        var newDate = changeDate(dateInput.value);
         var urlSingUp = 'https://basp-m2022-api-rest-server.herokuapp.com/signup?name=' + nameInput.value + 
-        '&lastName=' + lastNameInput.value + '&dni=' + documentInput.value + '&dob=' + finalDate + 
+        '&lastName=' + lastNameInput.value + '&dni=' + documentInput.value + '&dob=' + newDate + 
         '&phone='+ phoneNumberInput.value + '&address=' +adressInput.value + '&city=' + locationInput.value +
         '&zip=' + postalCodeInput.value + '&email=' + emailInput.value + '&password=' + passwordInput.value;
-
         fetch(urlSingUp)
             .then (function(entry) {
                 return entry.json();
@@ -428,6 +445,16 @@ window.onload = function(){
                         inputsArray += ('\n' + dataValues +': ' + data.data[dataValues])
                     }
                     alert('Succes: ' + data.success + '\n' + 'Request: ' + data.msg + inputsArray);
+                    localStorage.setItem('Name', nameInput.value);
+                    localStorage.setItem('lastName', lastNameInput.value);
+                    localStorage.setItem('dni', documentInput.value);
+                    localStorage.setItem('dob', newDate);
+                    localStorage.setItem('phone', phoneNumberInput.value);
+                    localStorage.setItem('address', adressInput.value);
+                    localStorage.setItem('city', locationInput.value);
+                    localStorage.setItem('zip', postalCodeInput.value);
+                    localStorage.setItem('email', emailInput.value);
+                    localStorage.setItem('password', passwordInput.value);
                 } else {
                     var errorInFetch = data.errors;
                     var inputsArrayError = [];
