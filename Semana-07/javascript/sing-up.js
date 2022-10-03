@@ -428,9 +428,13 @@ window.onload = function(){
                         inputsArray += ('\n' + dataValues +': ' + data.data[dataValues])
                     }
                     alert('Succes: ' + data.success + '\n' + 'Request: ' + data.msg + inputsArray);
-                } else if(inputsArray == '' ); {
-                    throw new Error('Empty Fields');
-                    //throw new Error (data.msg + '\n' + 'Succes: ' + data.success);
+                } else {
+                    var errorInFetch = data.errors;
+                    var inputsArrayError = [];
+                    for(var a = 0; a < errorInFetch.length; a++){
+                        inputsArrayError += '\n' + errorInFetch[a].msg;
+                    }
+                    throw new Error(inputsArrayError);
                 }
             })
             .catch(function(error){
