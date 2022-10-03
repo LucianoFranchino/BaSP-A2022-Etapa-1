@@ -3,7 +3,7 @@ window.onload = function(){
     var nameInput = document.getElementById('name');
     var lastNameInput = document.getElementById('last-name');
     var documentInput = document.getElementById('dni');
-    var dateInput = document.getElementById('date');
+    var dateInput = document.getElementById('birthday');
     var phoneNumberInput = document.getElementById('phone');
     var adressInput = document.getElementById('adress');
     var locationInput = document.getElementById('location');
@@ -16,7 +16,6 @@ window.onload = function(){
     errorWarning.classList.add("mensage-error");
     var errorAlert = [];
     var errorEmail;
-
     emailInput.onblur = function() {
         if (emailInput.value == '') {
             emailInput.classList.add('red-border');
@@ -157,12 +156,6 @@ window.onload = function(){
         errorWarning.remove();
     }
 
-    var year = date.value.substring(0 , date.value.indexOf('-'));
-    var month = date.value.substring(date.value.indexOf('-') + 1, date.value.indexOf('-') + 3);
-    var day = date.value.substring(date.value.indexOf('-')+ 4 , date.value.indexOf('-') + date.value.length);
-    var dateArr = [ month, day , year];
-    var finalDate = dateArr.join('/');
-
     var errorDate;
     dateInput.onblur = function() {
         if (dateInput.value == '') {
@@ -172,7 +165,7 @@ window.onload = function(){
             errorDate = 'Date error';
             errorAlert.push(errorDate);
         } else {
-            documentInput.classList.add('green-border');
+            dateInput.classList.add('green-border');
         }
     }
     dateInput.onfocus = function() {
@@ -409,47 +402,39 @@ window.onload = function(){
 
     singUpBtn.onclick = function(e) {
         e.preventDefault();
-        if(emailInput.value == '' && passwordInput.value == '' && nameInput.value == '' && lastNameInput.value == ''
-        && documentInput.value == '' && dateInput.value == '' && phoneNumberInput.value == '' 
-        && adressInput.value == '' && locationInput.value == '' && postalCodeInput.value == ''
-        && repeatPasswordInput.value == ''){
-            alert('Complete empty fields');
+        var year = dateInput.value.substring(0 , dateInput.value.indexOf('-'));
+        var month = dateInput.value.substring(dateInput.value.indexOf('-') + 1, dateInput.value.indexOf('-') + 3);
+        var day = dateInput.value.substring(dateInput.value.indexOf('-')+ 4 , dateInput.value.indexOf('-') 
+        + dateInput.value.length);
+        var dateArr = [month, day , year];
+        var finalDate = dateArr.join('/');
+        console.log(year);
+        console.log(month);
+        console.log(day);
+        var urlSingUp = 'https://basp-m2022-api-rest-server.herokuapp.com/signup?name=' + nameInput.value + 
+        '&lastName=' + lastNameInput.value + '&dni=' + documentInput.value + '&dob=' + finalDate + 
+        '&phone='+ phoneNumberInput.value + '&address=' +adressInput.value + '&city=' + locationInput.value +
+        '&zip=' + postalCodeInput.value + '&email=' + emailInput.value + '&password=' + passwordInput.value;
+
+        fetch(urlSingUp)
+            .then (function(entry) {
+                return entry.json();
+            })
+            .then (function(data) {
+                console.log(data);
+                if (data.success) {
+                    var inputsArray = [];
+                    for(var dataValues in data.data){
+                        inputsArray += ('\n' + dataValues +': ' + data.data[dataValues])
+                    }
+                    alert('Succes: ' + data.success + '\n' + 'Request: ' + data.msg + inputsArray);
+                } else if(inputsArray == '' ); {
+                    throw new Error('Empty Fields');
+                    //throw new Error (data.msg + '\n' + 'Succes: ' + data.success);
+                }
+            })
+            .catch(function(error){
+                alert(error);
+            })
         }
-        else if (errorAlert.length === 0) {
-            alert('Register Succesfuly: ' + 'Name: ' + nameInput.value + '\n' + 
-            'Last Name: ' + lastNameInput.value + '\n' +
-            'DNI: ' + documentInput.value + '\n' +
-            'Date: ' + dateInput.value + '\n' +
-            'Phone number: ' + phoneNumberInput.value + '\n' +
-            'Adress: ' + adressInput.value + '\n' +
-            'Location: ' + locationInput.value + '\n' +
-            'Postal code: ' + postalCodeInput.value + '\n' +
-            'Email: ' + emailInput.value + '\n' +
-            'Password: ' + passwordInput.value + '\n' +
-            'Repeat password: ' + repeatPasswordInput.value);
-        } else {
-            alert(errorAlert.join('-'));
-            console.log(errorAlert);
-            return;
-        }
-    }
-
-    function checkUrl(){
-    var urlSingUp = 'https://basp-m2022-api-rest-server.herokuapp.com/signup?name=' + nameInput.value + 
-    '&lastName=' + lastNameInput.value + '&dni=' + documentInput.value + '&dob=' + finalDate + 
-    '&phone='+ phoneNumberInput.value + '&address=' +adressInput.value + '&city=' + locationInput.value +
-    '&zip=' + postalCodeInput.value + '&email=' + emailInput.value + '&password=' + passwordInput.value +
-    '&repeatPassword' + repeatPasswordInput.value;
-
-    fetch(urlSingUp)
-        .then(function(entry){
-            return entry.json();
-        })
-        .then(function(data){
-            if(!data.success){
-                throw new Error(data.msg + '\n' + 'Succes: ' + '\n' + data.success);
-            }
-        })
-
-    }
 }
