@@ -409,28 +409,25 @@ window.onload = function(){
     var finalDate = dateArr.join('/');
     return finalDate;
     }
-    function newDate(){
-        var localNew = localStorage.getItem('dob');
-        console.log(localNew);
-        var [month, day ,year] = localNew.split('/');
-        console.log(month,day,year);
-        var newDateBirth = [day,month,year].join('/');
-        console.log(newDateBirth);
-        return newDateBirth;
+    function reverseDate(){
+        var getLocalDate = localStorage.getItem('dob');
+        var [month, day ,year] = getLocalDate.split('/');
+        var newReverseDate = [year,month,day].join('-');
+        return newReverseDate;
     }
     if(localStorage.getItem('name')){
-        var NewNewDate = newDate();
+        var getNewReverseDate = reverseDate();
         nameInput.value = localStorage.getItem('name');
         lastNameInput.value =localStorage.getItem('lastName');
         documentInput.value =localStorage.getItem('dni');
-        console.log('newnewnew',NewNewDate);
-        dateInput.value += NewNewDate;
+        dateInput.value += getNewReverseDate;
         phoneNumberInput.value =localStorage.getItem('phone');
         adressInput.value =localStorage.getItem('address');
         locationInput.value =localStorage.getItem('city');
         postalCodeInput.value =localStorage.getItem('zip');
         emailInput.value =localStorage.getItem('email');
         passwordInput.value =localStorage.getItem('password');
+        repeatPasswordInput.value = localStorage.getItem('repeatPassword');
     }
     singUpBtn.onclick = function(e) {
         e.preventDefault();
@@ -444,7 +441,6 @@ window.onload = function(){
                 return entry.json();
             })
             .then (function(data) {
-                console.log(data);
                 if (data.success) {
                     var inputsArray = [];
                     for(var dataValues in data.data){
@@ -461,6 +457,7 @@ window.onload = function(){
                     localStorage.setItem('zip', postalCodeInput.value);
                     localStorage.setItem('email', emailInput.value);
                     localStorage.setItem('password', passwordInput.value);
+                    localStorage.setItem('repeatPassword', repeatPasswordInput.value);
                 } else {
                     var errorInFetch = data.errors;
                     var inputsArrayError = [];
