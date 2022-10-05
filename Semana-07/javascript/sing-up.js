@@ -400,7 +400,7 @@ window.onload = function(){
         return saveError;
     }
 
-    function changeDate(changeDate){
+    function changeDate(){
     var year = dateInput.value.substring(0 , dateInput.value.indexOf('-'));
     var month = dateInput.value.substring(dateInput.value.indexOf('-') + 1, dateInput.value.indexOf('-') + 3);
     var day = dateInput.value.substring(dateInput.value.indexOf('-')+ 4 , dateInput.value.indexOf('-') 
@@ -409,26 +409,32 @@ window.onload = function(){
     var finalDate = dateArr.join('/');
     return finalDate;
     }
-    function dateFormat2(dates){
-        var [month,day,year] = dates.split('/');
-        var birthChange = [year,month,day].join('-');
-        return birthChange;
+    function newDate(){
+        var localNew = localStorage.getItem('dob');
+        console.log(localNew);
+        var [month, day ,year] = localNew.split('/');
+        console.log(month,day,year);
+        var newDateBirth = [day,month,year].join('/');
+        console.log(newDateBirth);
+        return newDateBirth;
     }
-
-    nameInput.value = localStorage.getItem('Name');
-    lastNameInput.value =localStorage.getItem('lastName');
-    documentInput.value =localStorage.getItem('dni');
-    dateInput.value = dateFormat2(localStorage.getItem('dob'));
-    phoneNumberInput.value =localStorage.getItem('phone');
-    adressInput.value =localStorage.getItem('address');
-    locationInput.value =localStorage.getItem('city');
-    postalCodeInput.value =localStorage.getItem('zip');
-    emailInput.value =localStorage.getItem('email');
-    passwordInput.value =localStorage.getItem('password');
-
+    if(localStorage.getItem('name')){
+        var NewNewDate = newDate();
+        nameInput.value = localStorage.getItem('name');
+        lastNameInput.value =localStorage.getItem('lastName');
+        documentInput.value =localStorage.getItem('dni');
+        console.log('newnewnew',NewNewDate);
+        dateInput.value += NewNewDate;
+        phoneNumberInput.value =localStorage.getItem('phone');
+        adressInput.value =localStorage.getItem('address');
+        locationInput.value =localStorage.getItem('city');
+        postalCodeInput.value =localStorage.getItem('zip');
+        emailInput.value =localStorage.getItem('email');
+        passwordInput.value =localStorage.getItem('password');
+    }
     singUpBtn.onclick = function(e) {
         e.preventDefault();
-        var newDate = changeDate(dateInput.value);
+        var newDate = changeDate();
         var urlSingUp = 'https://basp-m2022-api-rest-server.herokuapp.com/signup?name=' + nameInput.value + 
         '&lastName=' + lastNameInput.value + '&dni=' + documentInput.value + '&dob=' + newDate + 
         '&phone='+ phoneNumberInput.value + '&address=' +adressInput.value + '&city=' + locationInput.value +
@@ -445,7 +451,7 @@ window.onload = function(){
                         inputsArray += ('\n' + dataValues +': ' + data.data[dataValues])
                     }
                     alert('Succes: ' + data.success + '\n' + 'Request: ' + data.msg + inputsArray);
-                    localStorage.setItem('Name', nameInput.value);
+                    localStorage.setItem('name', nameInput.value);
                     localStorage.setItem('lastName', lastNameInput.value);
                     localStorage.setItem('dni', documentInput.value);
                     localStorage.setItem('dob', newDate);
